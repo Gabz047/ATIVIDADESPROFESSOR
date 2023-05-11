@@ -1,0 +1,14 @@
+<script>
+    const idade = Number(prompt("Informe sua idade"));
+    if (idade < 16) {
+        document.write(`Você não está apto a votar`);
+    }
+    else if (idade < 18) { 
+        document.write(`Você está apto a votar`);
+    } 
+    else if (idade >= 18) {
+       document.write(`Você é obrigado a votar`);
+    } else {
+        document.write(`Valor inválido`);
+    }
+</script>
