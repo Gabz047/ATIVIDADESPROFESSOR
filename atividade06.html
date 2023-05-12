@@ -1,0 +1,13 @@
+<script>
+ const notatrimestre1 = Number(prompt("Informe sua nota do primeiro trimestre").replace(",","."));
+ const notatrimestre2 = Number(prompt("Informe sua nota do segundo trimestre").replace(",","."));
+ const notatrimestre3 = Number(prompt("Informe sua nota do terceiro trimestre").replace(",","."));
+ const media = (notatrimestre1 + notatrimestre2 + notatrimestre3)/3
+ if (media < 4) {
+    document.write(`Sua média é ${media.toFixed(1).replace(",",".")} então você está REPROVADO`);
+ } else if (media < 6) {
+    document.write(`Sua média é ${media.toFixed(1).replace(",",".")} então você está em EXAME`);
+ } else if (media >= 6) {
+    document.write(`Sua média é ${media.toFixed(1).replace(",",".")} então você está APROVADO`);
+ }
+</script>
