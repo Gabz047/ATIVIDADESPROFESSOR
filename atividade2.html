@@ -1,14 +1,15 @@
 <script>
     const idade = Number(prompt("Informe sua idade").trim());
-    if (idade < 16) {
-        document.write(`Você não está apto a votar`);
-    }
-    else if (idade < 18) { 
-        document.write(`Você está apto a votar`);
-    } 
-    else if (idade >= 18) {
-       document.write(`Você é obrigado a votar`);
+    const possuiTitulo = prompt(`Você possui título eleitoral? (S ou N)`).toUpperCase().trim();
+
+    if (possuiTitulo == "S" || possuiTitulo == "N") {
+
+    if (idade >= 16 && possuiTitulo == "S") {
+       document.write(`Você pode votar!`);
     } else {
-        document.write(`Valor inválido`);
+        document.write(`Você não pode votar!`);
     }
+} else {
+    alert(`Opção inválida! Possui título deve ser S ou N!`)
+}
 </script>
